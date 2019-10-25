@@ -4,13 +4,22 @@
     Portafolio    
 @endsection
 
-@section('menu')
-    @include('layouts.menu-1')
+@section('cabecera')
+<section class="module-header full-height parallax bg-dark bg-dark-30" id="home" data-background="assets/images/module-10.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="h1 m-b-15">Portafolio</h1>
+                <h1 class="h6"><span class="rotate">Visual designer | Front-end developer</span></h1>
+            </div>
+        </div>
+    </div>
+</section>
 @endsection
 
 @section('contenido')
 <!-- Portfolio-->
-<section class="module p-b-0" id="portfolio" style="padding:100px 50px">
+<section class="module p-b-0" id="portfolio">
     <div class="container">
         <div class="row">
             <div class="col-md-12">

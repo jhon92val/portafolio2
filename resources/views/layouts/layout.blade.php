@@ -39,13 +39,12 @@
 
 		<!-- Barra de Menú-->
 
-		@yield('menu')
+		@include('layouts.menu')
 
 		<!-- Fin Barra de Menú-->
 
 		<!-- Wrapper-->
 <div class="wrapper">
-
 	
 	@yield('cabecera')
 
