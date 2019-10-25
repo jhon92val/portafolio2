@@ -7,13 +7,13 @@
         <div class="inner-navigation collapse">
             <div class="inner-nav onepage-nav">
                 <ul>
-                    <li><a href="#home"><span class="menu-item-span">Inicio</span></a></li>
-                    <li><a href="#profile"><span class="menu-item-span">Perfil</span></a></li>
-                    <li><a href="#portfolio"><span class="menu-item-span">Trabajos</span></a></li>
-                    <li><a href="#services"><span class="menu-item-span">Servicios</span></a></li>
-                    <li><a href="#resume"><span class="menu-item-span">Estudios</span></a></li>
-                    <li><a href="#blog"><span class="menu-item-span">Blog</span></a></li>
-                    <li><a href="#contact"><span class="menu-item-span">Contacto</span></a></li>
+                    <li><a href="{{url('/')}}#home"><span class="menu-item-span">Inicio</span></a></li>
+                    <li><a href="{{url('/')}}#profile"><span class="menu-item-span">Perfil</span></a></li>
+                    <li><a href="{{url('/')}}#portfolio"><span class="menu-item-span">Trabajos</span></a></li>
+                    <li><a href="{{url('/')}}#services"><span class="menu-item-span">Servicios</span></a></li>
+                    <li><a href="{{url('/')}}#resume"><span class="menu-item-span">Estudios</span></a></li>
+                    <li><a href="{{url('/')}}#blog"><span class="menu-item-span">Blog</span></a></li>
+                    <li><a href="{{url('/')}}#contact"><span class="menu-item-span">Contacto</span></a></li>
                     <li class="menu-item-has-children"><a href="#"><span class="menu-item-span">Pages</span></a>
                         <ul class="sub-menu">
                             <li class="menu-item-has-children"><a href="#">Blog</a>

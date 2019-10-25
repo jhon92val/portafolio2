@@ -16,3 +16,11 @@ use App\Http\Controllers\InicioController;
 Route::get('/', function () {
     return view('inicio');
 });
+
+Route::get('/portafolio', function () {
+    return view('portafolio');
+});
+
+Route::get('/portafolio-detalle', function () {
+    return view('portafolio-detalle');
+});

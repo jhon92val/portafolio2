@@ -2,7 +2,7 @@
 <footer class="footer">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-md-6"><span class="copyright">© 2017 <a href="#">2theme</a>, All Rights Reserved.</span></div>
+            <div class="col-md-6"><span class="copyright">© 2019 <a href="#">Jesús Konde</a>, Todos Los Derechos Reservados.</span></div>
             <div class="col-md-6">
                 <ul class="social-icons">
                     <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>

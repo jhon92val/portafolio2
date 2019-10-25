@@ -3,7 +3,7 @@
 /*! -----------------------------------------------------------------
 [Master Stylesheet]
 
-Project:     MStone
+Project:     Konde
 Version:     2.3.1
 
 ------------------------------------------------------------------
@@ -2439,6 +2439,10 @@ button {
     padding: 160px 0 0;
 }
 
+.module-page-title-1 {
+    padding: 80px 0 0;
+}
+
 .module-page-title .page-title-heading {
     margin: 0 0 10px;
 }
@@ -2675,7 +2679,7 @@ button {
 .module,
 .module-sm {
     background-color: #fff;
-    padding: 120px 0 100px;
+    padding: 40px 0 100px;
 }
 
 .module.module-gray,
