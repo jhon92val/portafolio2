@@ -52,7 +52,7 @@
                         <h5 class="portfolio-title">Raleway</h5>
                         <h6 class="portfolio-subtitle">Branding</h6>
                     </div>
-                </div><a class="portfolio-link" href="portfolio-single-1.html"></a>
+                </div><a class="portfolio-link" href="{{url('/portafolio-detalle')}}"></a>
             </div>
             <div class="portfolio-item js-tilt web design ">
                 <div class="portfolio-wrapper">
@@ -62,7 +62,7 @@
                         <h5 class="portfolio-title">Hilltop</h5>
                         <h6 class="portfolio-subtitle">Design</h6>
                     </div>
-                </div><a class="portfolio-link" href="portfolio-single-1.html"></a>
+                </div><a class="portfolio-link" href="{{url('/portafolio-detalle')}}"></a>
             </div>
             <div class="portfolio-item js-tilt photo web ">
                 <div class="portfolio-wrapper">
@@ -72,7 +72,7 @@
                         <h5 class="portfolio-title">Popcorn</h5>
                         <h6 class="portfolio-subtitle">Design</h6>
                     </div>
-                </div><a class="portfolio-link" href="portfolio-single-1.html"></a>
+                </div><a class="portfolio-link" href="{{url('/portafolio-detalle')}}"></a>
             </div>
             <div class="portfolio-item js-tilt design branding ">
                 <div class="portfolio-wrapper">
@@ -82,7 +82,7 @@
                         <h5 class="portfolio-title">Color</h5>
                         <h6 class="portfolio-subtitle">Design</h6>
                     </div>
-                </div><a class="portfolio-link" href="portfolio-single-1.html"></a>
+                </div><a class="portfolio-link" href="{{url('/portafolio-detalle')}}"></a>
             </div>
             <div class="portfolio-item js-tilt design photo ">
                 <div class="portfolio-wrapper">
@@ -92,7 +92,7 @@
                         <h5 class="portfolio-title">Bicycles</h5>
                         <h6 class="portfolio-subtitle">Design</h6>
                     </div>
-                </div><a class="portfolio-link" href="portfolio-single-1.html"></a>
+                </div><a class="portfolio-link" href="{{url('/portafolio-detalle')}}"></a>
             </div>
             <div class="portfolio-item js-tilt web design ">
                 <div class="portfolio-wrapper">
@@ -102,7 +102,7 @@
                         <h5 class="portfolio-title">Hilltop</h5>
                         <h6 class="portfolio-subtitle">Design</h6>
                     </div>
-                </div><a class="portfolio-link" href="portfolio-single-1.html"></a>
+                </div><a class="portfolio-link" href="{{url('/portafolio-detalle')}}"></a>
             </div>
             <div class="portfolio-item js-tilt photo web ">
                 <div class="portfolio-wrapper">
@@ -112,7 +112,7 @@
                         <h5 class="portfolio-title">Popcorn</h5>
                         <h6 class="portfolio-subtitle">Design</h6>
                     </div>
-                </div><a class="portfolio-link" href="portfolio-single-1.html"></a>
+                </div><a class="portfolio-link" href="{{url('/portafolio-detalle')}}"></a>
             </div>
             <div class="portfolio-item js-tilt design branding">
                 <div class="portfolio-wrapper">
@@ -122,7 +122,7 @@
                         <h5 class="portfolio-title">Color</h5>
                         <h6 class="portfolio-subtitle">Design</h6>
                     </div>
-                </div><a class="portfolio-link" href="portfolio-single-1.html"></a>
+                </div><a class="portfolio-link" href="{{url('/portafolio-detalle')}}"></a>
             </div>
             
             
@@ -134,7 +134,7 @@
                         <h5 class="portfolio-title">Popcorn</h5>
                         <h6 class="portfolio-subtitle">Design</h6>
                     </div>
-                </div><a class="portfolio-link" href="portfolio-single-1.html"></a>
+                </div><a class="portfolio-link" href="{{url('/portafolio-detalle')}}"></a>
             </div>
             <div class="portfolio-item js-tilt design branding ">
                 <div class="portfolio-wrapper">
@@ -144,7 +144,7 @@
                         <h5 class="portfolio-title">Color</h5>
                         <h6 class="portfolio-subtitle">Design</h6>
                     </div>
-                </div><a class="portfolio-link" href="portfolio-single-1.html"></a>
+                </div><a class="portfolio-link" href="{{url('/portafolio-detalle')}}"></a>
             </div>
             <div class="portfolio-item js-tilt design photo ">
                 <div class="portfolio-wrapper">
@@ -154,7 +154,7 @@
                         <h5 class="portfolio-title">Bicycles</h5>
                         <h6 class="portfolio-subtitle">Design</h6>
                     </div>
-                </div><a class="portfolio-link" href="portfolio-single-1.html"></a>
+                </div><a class="portfolio-link" href="{{url('/portafolio-detalle')}}"></a>
             </div>
             <div class="portfolio-item js-tilt branding">
                 <div class="portfolio-wrapper">
@@ -164,7 +164,7 @@
                         <h5 class="portfolio-title">Raleway</h5>
                         <h6 class="portfolio-subtitle">Branding</h6>
                     </div>
-                </div><a class="portfolio-link" href="portfolio-single-1.html"></a>
+                </div><a class="portfolio-link" href="{{url('/portafolio-detalle')}}"></a>
             </div>
             <div class="portfolio-item js-tilt web design ">
                 <div class="portfolio-wrapper">
@@ -174,7 +174,7 @@
                         <h5 class="portfolio-title">Hilltop</h5>
                         <h6 class="portfolio-subtitle">Design</h6>
                     </div>
-                </div><a class="portfolio-link" href="portfolio-single-1.html"></a>
+                </div><a class="portfolio-link" href="{{url('/portafolio-detalle')}}"></a>
             </div>
         </div>
     </div>

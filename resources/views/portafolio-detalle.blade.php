@@ -4,10 +4,6 @@
 Mi Portafolio    
 @endsection
 
-@section('menu')
-@include('layouts.menu-1')    
-@endsection
-
 @section('cabecera')
 <section class="module-header full-height parallax bg-dark bg-dark-30" data-background="assets/images/module-2.jpg">
     <div class="container">
