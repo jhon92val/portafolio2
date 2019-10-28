@@ -18,55 +18,85 @@
 @endsection
 
 @section('contenido')
-    <!-- Counters-->
-<section class="module module-gray">
+<!-- Page Header-->
+<section class="module-page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="page-title-heading">Progress bar</h2>
+                <h6 class="page-title-subheading">Experienced and Friendly</h6>
+            </div>
+            <div class="col-md-6">
+                <p>Map where your photos were taken and discover local points of interest. Map where your photos. Map where your photos were taken and discover local points of interest. Map where your photos.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <hr>
+            </div>
+            <div class="col-md-6">
+                <hr>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Page Header end-->
+
+<!-- Pie-chart-->
+<section class="module">
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <div class="counter">
-                    <div class="counter-icon"><span class="icon-telescope"></span></div>
-                    <h5 class="counter-number">
-                        <div class="counter-timer" data-from="0" data-to="785">0</div>
-                    </h5>
-                    <h5 class="counter-title">Pixels Pushed</h5>
+                <div class="pie-chart">
+                    <div class="chart" data-percent="82" data-chart-options="{&quot;barColor&quot;:&quot;#72c02c&quot;}"><span class="chart-text"><span data-background-color="#72c02c"><i class="icon-telescope"></i></span></span></div>
+                    <div class="chart-title">
+                        <h6>Custom Solutions</h6>
+                    </div>
+                    <div class="chart-content">
+                        <p>Map where your photos were taken and discover local points of interest. Map where your photos.</p>
+                    </div>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="counter">
-                    <div class="counter-icon"><span class="icon-strategy"></span></div>
-                    <h5 class="counter-number">
-                        <div class="counter-timer" data-from="0" data-to="4017">0</div>
-                    </h5>
-                    <h5 class="counter-title">Cups of Coffee</h5>
+                <div class="pie-chart">
+                    <div class="chart" data-percent="37"><span class="chart-text"><span><i class="icon-circle-compass"></i></span></span></div>
+                    <div class="chart-title">
+                        <h6>Fully Responsive</h6>
+                    </div>
+                    <div class="chart-content">
+                        <p>Map where your photos were taken and discover local points of interest. Map where your photos.</p>
+                    </div>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="counter">
-                    <div class="counter-icon"><span class="icon-circle-compass"></span></div>
-                    <h5 class="counter-number">
-                        <div class="counter-timer" data-from="0" data-to="546">0</div>
-                    </h5>
-                    <h5 class="counter-title">Awards Won</h5>
+                <div class="pie-chart">
+                    <div class="chart" data-percent="55" data-chart-options="{&quot;barColor&quot;:&quot;#4a90e2&quot;}"><span class="chart-text"><span data-background-color="#4a90e2"><i class="icon-strategy"></i></span></span></div>
+                    <div class="chart-title">
+                        <h6>User Friendly</h6>
+                    </div>
+                    <div class="chart-content">
+                        <p>Map where your photos were taken and discover local points of interest. Map where your photos.</p>
+                    </div>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="counter">
-                    <div class="counter-icon"><span class="icon-global"></span></div>
-                    <h5 class="counter-number">
-                        <div class="counter-timer" data-from="0" data-to="468">0</div>
-                    </h5>
-                    <h5 class="counter-title">Theme Users</h5>
+                <div class="pie-chart">
+                    <div class="chart" data-percent="37"><span class="chart-text"><span><i class="icon-circle-compass"></i></span></span></div>
+                    <div class="chart-title">
+                        <h6>Fully Responsive</h6>
+                    </div>
+                    <div class="chart-content">
+                        <p>Map where your photos were taken and discover local points of interest. Map where your photos.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- Counters end-->
-
-
+<!-- Pie-chart end-->
 
 <!-- Services-->
-<section class="module module-dark" id="services">
+<section class="module module-gray" id="services">
     <div class="container">
         <div class="row">
             <div class="col-md-4">

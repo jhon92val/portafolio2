@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-md-12">
                 <h1 class="h1 m-b-15">Jesús <br/> Konde</h1>
-                <div id="typed-strings"><span>Visual designer</span><span>Front-end developer</span></div>
+                <div id="typed-strings"><span>Graphic Designer</span><span>Visual Artist</span></div>
                 <h1 class="h6"><span id="typed"></span></h1>
             </div>
         </div>
@@ -28,8 +28,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="m-title c-align">
-                    <h2>Daniel Raleway</h2>
-                    <h6>Visual Designer & Front-end Developer</h6>
+                    <h2>Jesús Konde</h2>
+                    <h6>Graphic Designer & Visual Artist</h6>
                 </div>
             </div>
         </div>
@@ -38,12 +38,12 @@
                 <p><img src="assets/images/im.jpg" alt=""></p>
             </div>
             <div class="col-md-4">
-                <h5>Profesional Profile</h5>
+                <h5>Perfil Profesional</h5>
                 <p>Map where your photos were taken and discover local points of interest. Map where your photos. Map where your photos were taken and discover local points of interest. Map where your photos.</p>
                 <p>Map where your photos were taken and discover local points of interest. Map where your photos. Map where your photos were taken and discover local points of interest. Map where your photos.</p>
             </div>
             <div class="col-md-4">
-                <h5>My Skills</h5>
+                <h5>Mis habilidades</h5>
                 <div class="progress-item">
                     <div class="progress-title">Gulp</div>
                     <div class="progress">
@@ -82,8 +82,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="m-title c-align">
-                    <h2>Resume</h2>
-                    <h6>My education and experience</h6>
+                    <h2>Resumen Profesional</h2>
+                    <h6>Mi educación y Experiencia</h6>
                 </div>
             </div>
         </div>
@@ -136,7 +136,7 @@
                     </li>
                     <div class="timeline-top"></div>
                 </ul>
-                <div class="text-center"><a class="btn btn-lg btn-gray" href="#"><span>Download CV</span></a></div>
+                <div class="text-center"><a class="btn btn-lg btn-gray" href="#"><span>Descargar</span></a></div>
             </div>
         </div>
     </div>
@@ -214,79 +214,6 @@
 </section>
 <!-- Clients and Testimonials end-->
 
-<!-- Posts-->
-<section class="module module-gray" id="blog">
-    <div class="container">
-        <div class="row blog-grid" style="margin-top: -200px;">
-            <div class="col-md-4 post-item">
-
-                <!-- Post-->
-                <article class="post">
-                    <div class="post-preview"><a href="#"><img src="assets/images/blog/1.jpg" alt=""></a>
-                        <div class="post-category"><a href="#">Lifestyle</a></div>
-                    </div>
-                    <div class="post-wrapper">
-                        <div class="post-header">
-                            <h2 class="post-title"><a href="blog-single.html">New Trends</a></h2>
-                        </div>
-                        <div class="post-content">
-                            <p>Up maids me an ample stood given. Certainty say suffering his him collected intention promotion. Hill sold ham men made lose case.</p>
-                        </div>
-                    </div>
-                    <div class="post-info"><a href="#">Mike Ross</a> on February 14, 2017</div>
-                </article>
-                <!-- Post end-->
-            </div>
-            <div class="col-md-4 post-item">
-
-                <!-- Post-->
-                <article class="post">
-                    <div class="post-preview"><a href="#"><img src="assets/images/blog/3.jpg" alt=""></a>
-                        <div class="post-category" data-background-color="#ffbb44"><a href="#">Science</a></div>
-                    </div>
-                    <div class="post-wrapper">
-                        <div class="post-header">
-                            <h2 class="post-title"><a href="blog-single.html">Behind the color</a></h2>
-                        </div>
-                        <div class="post-content">
-                            <p>Up maids me an ample stood given. Certainty say suffering his him collected intention promotion. Hill sold ham men made lose case.</p>
-                        </div>
-                    </div>
-                    <div class="post-info"><a href="#">Mike Ross</a> on February 14, 2017</div>
-                </article>
-                <!-- Post end-->
-            </div>
-            <div class="col-md-4 post-item">
-
-                <!-- Post-->
-                <article class="post">
-                    <div class="post-preview"><a href="#"><img src="assets/images/blog/5.jpg" alt=""></a>
-                        <div class="post-category" data-background-color="#4CAF50"><a href="#">Business</a></div>
-                    </div>
-                    <div class="post-wrapper">
-                        <div class="post-header">
-                            <h2 class="post-title"><a href="blog-single.html">Bicycles</a></h2>
-                        </div>
-                        <div class="post-content">
-                            <p>Up maids me an ample stood given. Certainty say suffering his him collected intention promotion. Hill sold ham men made lose case.</p>
-                        </div>
-                    </div>
-                    <div class="post-info"><a href="#">Mike Ross</a> on February 14, 2017</div>
-                </article>
-                <!-- Post end-->
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="text-center">
-                    <div class="spacer m-b-30"></div><a class="btn btn-brand" href="#"><span>View All Posts</span></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Posts end-->
-
-
+{{--@include('layouts.post-seccion')--}}
     
 @endsection

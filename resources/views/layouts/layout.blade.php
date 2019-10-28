@@ -52,8 +52,8 @@
 
 	@include('layouts.contacto')
 
-			@include('layouts.footer')
-		</div>
+	@include('layouts.footer')
+</div>
 		<!-- Wrapper end-->
 
 		<!-- Scripts-->
@@ -64,6 +64,4 @@
 		<script src="{{asset('assets/js/plugins.min.js')}}"></script>
 		<script src="{{asset('assets/js/custom.min.js')}}"></script>
 	</body>
-
-<!-- Mirrored from themes.2the.me/MStone/2.3.1/index-7.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Aug 2019 20:27:27 GMT -->
 </html>

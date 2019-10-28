@@ -13,17 +13,11 @@
 
 use App\Http\Controllers\InicioController;
 
-Route::get('/', function () {
-    return view('inicio');
-});
+Route::get('/', "InicioController@inicio");
 
-Route::get('/servicios', function () {
-    return view('servicios');
-});
+Route::get('/servicios', "InicioController@servicios");
 
-Route::get('/portafolio', function () {
-    return view('portafolio');
-});
+Route::get('/portafolio', "InicioController@portafolio");
 
 Route::get('/portafolio-detalle', function () {
     return view('portafolio-detalle');
