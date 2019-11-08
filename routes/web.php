@@ -22,3 +22,14 @@ Route::get('/portafolio', "InicioController@portafolio");
 Route::get('/portafolio-detalle', function () {
     return view('portafolio-detalle');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes(
+
+['register' => false]
+
+);
+
+Route::get('/home', 'HomeController@index')->name('home');

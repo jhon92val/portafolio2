@@ -9,7 +9,7 @@
                     <li><a href="{{url('/')}}"><span class="menu-item-span">Inicio</span></a></li>
                     <li><a href="{{url('/servicios')}}"><span class="menu-item-span">Servicios</span></a></li>
                     <li><a href="{{url('/portafolio')}}"><span class="menu-item-span">Portafolio</span></a></li>
-                    <li><a href="#contact"><span class="menu-item-span">Contacto</span></a></li>
+                    <li id="contact-menu"><a href="#contact"><span class="menu-item-span">Contacto</span></a></li>
                 </ul>
             </div>
         </div>
