@@ -228,4 +228,14 @@ return [
 
     ],
 
+    /*
+/ Aplication Services Providers 
+*/
+Intervention\Image\ImageServiceProvider::class,
+
+/*
+/ Aliases
+*/
+'Image' => Intervention\Image\Facades\Image::class,
+
 ];

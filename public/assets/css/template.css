@@ -441,6 +441,10 @@ pre {
     padding: 1rem 0;
 }
 
+.formulario{
+    width: 700%;
+}
+
 .form-control:focus {
     box-shadow: none;
     border-color: #eee;

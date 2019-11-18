@@ -1,11 +1,16 @@
-@extends('layouts.app')
+@extends('layouts.layout-admin')
 
-@section('content')
+@section('titulo')
+    Panel Administrador
+@endsection
+
+@section('contenido')
+<section class="module-page-title">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">Felicidades</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,10 +19,11 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Has iniciado sesión
                 </div>
             </div>
         </div>
     </div>
 </div>
+</section>
 @endsection
