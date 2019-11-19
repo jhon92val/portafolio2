@@ -25,7 +25,8 @@ Route::get('/portafolio-detalle', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/crear', 'HomeController@create')->name('crear');
+Route::get('/trabajos/crear', 'HomeController@create')->name('crear');
+Route::post('/guardar', 'HomeController@store')->name('guardar');
 Route::get('/actualizar', 'HomeController@update')->name('actualizar');
 Route::get('/eliminar', 'HomeController@destroy')->name('eliminar');
 

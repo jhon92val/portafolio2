@@ -1,12 +1,12 @@
-<header class="header header-center">
+<header class="header header-center" style="background:#000">
     <div class="container-fluid">
         <!-- Brand-->
-        <div class="inner-header"><a class="inner-brand" href="index.html"><img class="brand-dark" src="{{asset('assets/images/logo.png')}}" width="30px" alt=""><img class="brand-light" src="{{asset('assets/images/logo-light.png')}}" width="30px" alt=""></a></div>
+        <div class="inner-header"><a class="inner-brand" href="{{url('/home')}}"><img class="brand-dark" src="{{asset('assets/images/logo-light.png')}}" width="30px" alt=""><img class="brand-light" src="{{asset('assets/images/logo-light.png')}}" width="30px" alt=""></a></div>
         <!-- Navigation-->
         <div class="inner-navigation collapse">
             <div class="inner-nav onepage-nav">
                 <ul>
-                    <li><a href="{{url('/crear')}}"><span class="menu-item-span">Nuevo</span></a></li>
+                    <li><a href="{{url('/trabajos/crear')}}"><span class="menu-item-span">Nuevo</span></a></li>
                     <li><a href="{{url('/admin')}}"><span class="menu-item-span">Mis trabajos</span></a></li>
                     <li class="menu-item-has-children">
                         <a href="#">

@@ -3,30 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Image;
 
-class HomeController extends Controller
+class PortafolioController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
-     
-     /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     public function index()
     {
-        return view('admin');
+        //
     }
 
     /**
@@ -36,7 +23,7 @@ class HomeController extends Controller
      */
     public function create()
     {
-        return view('trabajos.create');
+        //
     }
 
     /**
@@ -47,7 +34,7 @@ class HomeController extends Controller
      */
     public function store(Request $request)
     {
-       //
+        //
     }
 
     /**
@@ -81,7 +68,7 @@ class HomeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return view('trabajos.update');
+        //
     }
 
     /**
@@ -90,12 +77,8 @@ class HomeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-
-     
     public function destroy($id)
     {
-        return view('trabajos.delete');
+        //
     }
-
-    
 }

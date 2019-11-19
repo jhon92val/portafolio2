@@ -4,8 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Trabajo extends Model
+class Imagen extends Model
 {
-    //protected $table='trabajos';
-
+    //
 }

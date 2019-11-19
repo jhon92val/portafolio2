@@ -6,7 +6,7 @@
 
 @section('contenido')
 <section class="module-page-title">
-        <div class="container mx-5">
+        <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <h2 class="page-title-heading">Crear Nuevo Trabajo</h2>
@@ -16,22 +16,24 @@
         </div>
 </section>
 <section class="module">
-        <div class="container mx-5">
+        <div class="container">
             
                     <div class="row">
-                        <form name="newTrabajo" method="POST" action="" class="formulario" enctype="multipart/form-data">
+                        <form method="POST" action="/guardar" class="formulario" enctype="multipart/form-data">
                         <div class="d-flex">
                         <div class="form-group col-md-6">
-                            <input class="form-control" type="text" name="titulo" placeholder="Titulo" required="">
+                            <label for="tituloTrabajo">Titulo</label>
+                            <input id="tituloTrabajo" class="form-control" type="text" name="titulo" placeholder="" required="">
                         </div>
                         <div class="form-group col-md-6">
-                            <input class="form-control" type="date" name="fecha" placeholder="Fecha" min="2000-01-01" max="2200-12-12" required="">
+                            <label for="fechaTrabajo">Fecha</label>
+                            <input class="form-control" type="date" name="fecha" placeholder="Fecha" min="2000-01-01" max="2200-12-12" id="fechaTrabajo" required="">
                         </div>
                     </div>
                         <div class="form-group col-md-12">
                             
-                                <label for="exampleFormControlSelect1">Categoría</label>
-                                <select class="form-control" id="exampleFormControlSelect1">
+                                <label for="categoriaSelect">Categoría</label>
+                                <select class="form-control" id="categoriaSelect">
                                   <option disabled selected>Selecciona una Categoría</option>
                                   <option>Categoría 1</option>
                                   <option>Categoría 2</option>
@@ -46,11 +48,12 @@
                         </div>
 
                         <div class="d-flex">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <div class="custom-file form-group col-md-3">
-                                <label for="exampleFormControlFile1">Imagen 1</label>
-                                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                <label for="exampleFormControlFile1" class="text-uppercase">imagen de Portada</label>
+                                <input type="file" name="imagen1" class="form-control-file" id="exampleFormControlFile1">
                         </div>
-                        <div class="form-group col-md-3">
+                        <!--<div class="form-group col-md-3">
                                 <label for="exampleFormControlFile1">Imagen 2</label>
                                 <input type="file" class="form-control-file" id="exampleFormControlFile1">
                         </div>
@@ -61,12 +64,12 @@
                         <div class="form-group col-md-3">
                                 <label for="exampleFormControlFile1">Imagen 4</label>
                                 <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                        </div>
+                        </div>-->
                         </div>
                         <div class="form-group col-md-12 ml-1 mt-5">
-                        <button type="reset" class="btn btn-brand">
+                       <!-- <button type="reset" class="btn btn-brand">
                                 <span>{{ __('Limpiar') }}</span>
-                        </button>
+                        </button>-->
                         <button type="submit" class="btn btn-brand float-right">
                                 <span>{{ __('Guardar') }}</span>
                         </button>
