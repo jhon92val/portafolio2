@@ -19,18 +19,18 @@
         <div class="container">
             
                     <div class="row">
-                        <form method="POST" action="/guardar" class="formulario" enctype="multipart/form-data">
+                        <form method="POST" action={{action('HomeController@store')}} class="formulario" enctype="multipart/form-data">
                         <div class="d-flex">
                         <div class="form-group col-md-6">
-                            <label for="tituloTrabajo">Titulo</label>
-                            <input id="tituloTrabajo" class="form-control" type="text" name="titulo" placeholder="" required="">
+                            <label for="titulo">Titulo</label>
+                            <input id="titulo" class="form-control" type="text" name="titulo" placeholder="" required="">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="fechaTrabajo">Fecha</label>
+                            <label for="fecha">Fecha</label>
                             <input class="form-control" type="date" name="fecha" placeholder="Fecha" min="2000-01-01" max="2200-12-12" id="fechaTrabajo" required="">
                         </div>
                     </div>
-                        <div class="form-group col-md-12">
+                        <!--<div class="form-group col-md-12">
                             
                                 <label for="categoriaSelect">Categoría</label>
                                 <select class="form-control" id="categoriaSelect">
@@ -42,16 +42,16 @@
                                   <option>Categoría 5</option>
                                 </select>
                               
-                        </div>
+                        </div>-->
                         <div class="form-group col-md-12">
-                            <textarea class="form-control" name="message" placeholder="Escribe algo sobre esto..." rows="8" required=""></textarea>
+                            <textarea class="form-control" name="descripcion" placeholder="Escribe algo sobre esto..." rows="8" required=""></textarea>
                         </div>
 
                         <div class="d-flex">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <div class="custom-file form-group col-md-3">
-                                <label for="exampleFormControlFile1" class="text-uppercase">imagen de Portada</label>
-                                <input type="file" name="imagen1" class="form-control-file" id="exampleFormControlFile1">
+                                <label for="portada" class="text-uppercase">imagen de Portada</label>
+                                <input type="file" name="portada" class="form-control-file" id="portada">
                         </div>
                         <!--<div class="form-group col-md-3">
                                 <label for="exampleFormControlFile1">Imagen 2</label>

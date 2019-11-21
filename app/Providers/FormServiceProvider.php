@@ -14,7 +14,12 @@ class FormServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        Form ::component('text','components.form.text',['name']);
+        Form ::component('text','components.form.text',['name','value' => null, 'attributes' => []]);
+        Form ::component('textarea','components.form.textarea',['name','value' => null, 'attributes' => []]);
+        Form ::component('submit','components.form.submit',['name','value' => null, 'attributes' => []]);
+        Form ::component('text','components.form.text',['name','value' => null, 'attributes' => []]);
+        Form ::component('text','components.form.text',['name','value' => null, 'attributes' => []]);
+        Form ::component('text','components.form.text',['name','value' => null, 'attributes' => []]);
     }
 
     /**

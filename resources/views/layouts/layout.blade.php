@@ -39,7 +39,7 @@
 
 		<!-- Barra de Menú-->
 
-		@include('layouts.menu')
+		@include('layouts.nav')
 
 		<!-- Fin Barra de Menú-->
 

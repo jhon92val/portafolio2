@@ -18,13 +18,13 @@ class CreateTrabajosTable extends Migration
             $table->string('titulo',50);
             $table->date('fecha');
             $table->text('descripcion');
-            $table->unsignedBigInteger('categoria_id');
-            $table->foreign('categoria_id','fk_trabajos_categoria')->references('id')->on('categorias')->onDelete('restrict')->onUpdate('restrict');
+            //$table->unsignedBigInteger('categoria_id');
+            //$table->foreign('categoria_id','fk_trabajos_categoria')->references('id')->on('categorias')->onDelete('restrict')->onUpdate('restrict');
             //$table->unsignedBigInteger('galeria_id');
             //$table->foreign('galeria_id','fk_trabajos_galeria')->references('id')->on('galerias')->onDelete('restrict')->onUpdate('restrict');
             $table->string('portada');
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id','fk_trabajos_usuario')->references('id')->on('users')->onDelete('restrict')->onUpdate('restrict');
+            //$table->unsignedBigInteger('user_id');
+           // $table->foreign('user_id','fk_trabajos_usuario')->references('id')->on('users')->onDelete('restrict')->onUpdate('restrict');
             $table->timestamps();
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_spanish_ci';
