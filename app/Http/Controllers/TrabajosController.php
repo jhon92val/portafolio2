@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Trabajo;
 
 class TrabajosController extends Controller
 {
+
+    
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +16,8 @@ class TrabajosController extends Controller
      */
     public function index()
     {
-        //
+        $trabajos = Trabajo::with('Imagenes')->get();
+        return view('portafolio')->with('trabajos' , $trabajos);
     }
 
     /**

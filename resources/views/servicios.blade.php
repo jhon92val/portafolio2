@@ -13,6 +13,9 @@
                 <h1 class="h6"><span class="rotate">Visual designer | Front-end developer</span></h1>
             </div>
         </div>
+        <div class="mouse-icon">
+            <div class="wheel"></div>
+        </div>
     </div>
 </section>
 @endsection

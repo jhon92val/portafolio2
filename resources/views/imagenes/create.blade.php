@@ -1,7 +1,7 @@
 @extends('layouts.layout-admin')
 
 @section('titulo')
-    Nuevo Trabajo
+    Agregar Imagenes
 @endsection
 
 
@@ -22,8 +22,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="page-title-heading">Crear Nuevo Trabajo</h2>
-                    <h6 class="page-title-subheading">Ingresa la información de tu nuevo trabajo</h6>
+                    <h2 class="page-title-heading">Agregar Nuevas Imagenes</h2>
+                    <h6 class="page-title-subheading">Agrega un maximo de tres (3) imagenes a tu trabajo</h6>
                 </div>
             </div>
         </div>

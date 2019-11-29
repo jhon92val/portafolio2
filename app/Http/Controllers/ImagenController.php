@@ -6,14 +6,19 @@ use Illuminate\Http\Request;
 
 class ImagenController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($album_id)
     {
-        //
+        return view('imagenes.create')->with('album_id',$album_id);
     }
 
     /**

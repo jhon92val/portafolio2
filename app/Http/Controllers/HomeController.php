@@ -28,7 +28,8 @@ class HomeController extends Controller
 
     public function index()
     {
-        return view('admin');
+        $trabajos = Trabajo::with('Imagenes')->get();
+        return view('admin')->with('trabajos' , $trabajos);
     }
 
     /**
@@ -53,7 +54,7 @@ class HomeController extends Controller
             //'titulo' => 'required|max:255' ,
             //'fecha' => 'date',
            // 'descripcion' => 'required|max:500',
-            'portada' => 'image|max:1999',
+            'portada' => 'required|image|max:1999',
         ]);
 
         //OBTENER EL NOMBRE DEL ARCHIVO CON SU EXTENSION
@@ -82,7 +83,7 @@ class HomeController extends Controller
 
         $trabajo->save();
 
-        return redirect('/trabajos/crear')->with('success','Trabajo Creado');
+        return redirect('/trabajos/crear')->with('success','GUARDADO CON EXITO!');
 
     }
 
@@ -94,7 +95,8 @@ class HomeController extends Controller
      */
     public function show($id)
     {
-        //
+         $trabajo = Trabajo::with('Imagenes')->find($id);
+         return view('trabajos.show')->with('trabajo',$trabajo);
     }
 
     /**

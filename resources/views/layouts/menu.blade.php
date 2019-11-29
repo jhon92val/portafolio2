@@ -6,8 +6,9 @@
         <div class="inner-navigation collapse">
             <div class="inner-nav onepage-nav">
                 <ul>
+                        <li><a href="{{url('/home')}}"><span class="menu-item-span">Inicio</span></a></li>
                     <li><a href="{{url('/trabajos/crear')}}"><span class="menu-item-span">Nuevo</span></a></li>
-                    <li><a href="{{url('/admin')}}"><span class="menu-item-span">Mis trabajos</span></a></li>
+                    
                     <li class="menu-item-has-children">
                         <a href="#">
                             <span class="menu-item-span">{{ Auth::user()->name }}</span>

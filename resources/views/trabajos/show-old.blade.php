@@ -1,21 +1,23 @@
-@extends('layouts.layout')
+@extends('layouts.layout-admin')
 
 @section('titulo')
-Mi Portafolio    
+    Crear {{$trabajo->titulo}}
 @endsection
 
+
 @section('cabecera')
-<section class="module-header full-height parallax bg-dark bg-dark-30" data-background="{{url('assets/images/module-2.jpg')}}">
+<section class="module-header full-height parallax bg-dark bg-dark-30" data-background="../storage/images/trabajos/{{$trabajo->portada}}">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="h1 m-b-10">Hilltop</h1>
+            <h1 class="h1 m-b-10">{{$trabajo->titulo}}</h1>
                 <ul class="post-meta h6">
-                    <li>August 18, 2016</li>
+                    <li>{{$trabajo->fecha}}</li>
                     <li>In <a href="#">Branding</a>, <a href="#">Design</a></li>
                 </ul>
             </div>
         </div>
+        
     </div>
 </section>
 @endsection
@@ -25,14 +27,14 @@ Mi Portafolio
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h2 class="m-b-10">HILLTOP</h2>
+                <h2 class="m-b-10">{{$trabajo->titulo}}</h2>
                 <ul class="post-meta h6">
-                    <li>August 18, 2016</li>
+                    <li>{{$trabajo->fecha}}</li>
                     <li>In <a href="#">Branding</a>, <a href="#">Design</a></li>
                 </ul>
             </div>
             <div class="col-md-6">
-                <p>Map where your photos were taken and discover local points of interest. Map where your photos. Map where your photos were taken and discover local points of interest. Map where your photos.</p>
+                <p>{{$trabajo->descripcion}}</p>
             </div>
         </div>
         <div class="row">

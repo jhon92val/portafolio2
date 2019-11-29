@@ -14,6 +14,9 @@
                 <div id="typed-strings"><span>Graphic Designer</span><span>Visual Artist</span></div>
                 <h1 class="h6"><span id="typed"></span></h1>
             </div>
+            <div class="mouse-icon">
+                <div class="wheel"></div>
+            </div>
         </div>
     </div>
 </section>

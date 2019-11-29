@@ -17,18 +17,20 @@ Route::get('/', "InicioController@inicio");
 
 Route::get('/servicios', "InicioController@servicios");
 
-Route::get('/portafolio', "InicioController@portafolio");
+Route::get('/portafolio', "TrabajosController@index");
 
-Route::get('/portafolio-detalle', function () {
+Route::get('/portafolio/detalle', function () {
     return view('portafolio-detalle');
 });
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/trabajos/crear', 'HomeController@create')->name('crear');
+Route::get('/trabajos/{id}', 'HomeController@show')->name('mostrar');
 Route::post('/trabajos/guardar', 'HomeController@store')->name('guardar');
 Route::get('/actualizar', 'HomeController@update')->name('actualizar');
 Route::get('/eliminar', 'HomeController@destroy')->name('eliminar');
 
+Route::get('/imagenes/crear/{id}', 'ImagenController@create')->name('crear');
 
 Auth::routes();
