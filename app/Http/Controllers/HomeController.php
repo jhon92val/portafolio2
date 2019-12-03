@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Trabajo;
 use Dotenv\Regex\Success;
-use Image;
 
 class HomeController extends Controller
 {

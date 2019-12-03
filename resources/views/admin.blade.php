@@ -14,8 +14,8 @@
         <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="m-title c-align">
-                            <h2 class="display-4">Mis trabajos</h2>
+                        <div class="m-title c-align" style="margin-bottom:15px">
+                            <h2>Mis trabajos</h2>
                             <h6>An eye for detail makes our works excellent</h6>
                         </div>
                     </div>
@@ -32,8 +32,8 @@
                             <div class="portfolio-img-wrap" data-background="storage/images/trabajos/{{$trabajo->portada}}"></div>
                                 <div class="portfolio-overlay"></div>
                                 <div class="portfolio-caption">
-                                    <h5 class="portfolio-title">{{$trabajo->titulo}}</h5>
-                                    <h6 class="portfolio-subtitle">{{$trabajo->fecha}}</h6>
+                                    <h4 class="portfolio-title">{{$trabajo->titulo}}</h4>
+                                    <h5 class="portfolio-subtitle fechaTexto prueba">{{$trabajo->fecha}}</h5>
                                 </div>
                             </div><a class="portfolio-link" href="/trabajos/{{$trabajo->id}}"></a>
                     </div>
@@ -43,8 +43,8 @@
                                 <div class="portfolio-img-wrap" data-background="storage/images/trabajos/{{$trabajo->portada}}"></div>
                                     <div class="portfolio-overlay"></div>
                                     <div class="portfolio-caption">
-                                        <h5 class="portfolio-title">{{$trabajo->titulo}}</h5>
-                                        <h6 class="portfolio-subtitle">{{$trabajo->fecha}}</h6>
+                                        <h4 class="portfolio-title">{{$trabajo->titulo}}</h4>
+                                        <h5 class="portfolio-subtitle fechaTexto prueba">{{$trabajo->fecha}}</h5>
                                     </div>
                                 </div><a class="portfolio-link" href="/trabajos/{{$trabajo->id}}"></a>
                         </div>                   
@@ -68,4 +68,12 @@
 </section>
 
 @endif
+@endsection
+
+@section('script')
+    <script>
+    var fechaOld = document.getElementsByTagName('h5').innerHTML;      
+    var fechaNew = fechaOld.split('-').reverse().join('/');
+    document.getElementsByTagName('h5').innerHTML= fechaNew;
+    </script>    
 @endsection

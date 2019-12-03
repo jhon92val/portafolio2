@@ -57,12 +57,14 @@
 		<!-- Wrapper end-->
 
 		<!-- Scripts-->
-		<script src="{{asset('assets/js/jquery-2.2.4.min.js')}}"></script>
+		<script src="{{asset('assets/js/jquery-3.4.1.min.js')}}"></script>
+		<script src="{{asset('assets/js/popper.min.js')}}"></script>
 		<!--<script src="../../../cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>-->
 		<script src="{{asset('assets/bootstrap/js/bootstrap.min.js')}}"></script>
 		<script src="{{asset('assets/bootstrap/notify/bootstrap-notify.js')}}"></script>
-		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA0rANX07hh6ASNKdBr4mZH0KZSqbHYc3Q"></script>
+		<!--<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA0rANX07hh6ASNKdBr4mZH0KZSqbHYc3Q"></script>-->
 		<script src="{{asset('assets/js/plugins.min.js')}}"></script>
 		<script src="{{asset('assets/js/custom.min.js')}}"></script>
+		@yield('script')
 	</body>
 </html>

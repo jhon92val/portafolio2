@@ -67,23 +67,8 @@
                                 <label for="portada" class="text-uppercase">imagen de Portada</label>
                                 <input type="file" name="portada" class="form-control-file" id="portada" required>
                         </div>
-                        <!--<div class="form-group col-md-3">
-                                <label for="exampleFormControlFile1">Imagen 2</label>
-                                <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                        </div>
-                        <div class="form-group col-md-3">
-                                <label for="exampleFormControlFile1">Imagen 3</label>
-                                <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                        </div>
-                        <div class="form-group col-md-3">
-                                <label for="exampleFormControlFile1">Imagen 4</label>
-                                <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                        </div>-->
                         </div>
                         <div class="form-group col-md-12 ml-1 mt-5">
-                       <!-- <button type="reset" class="btn btn-brand">
-                                <span>{{ __('Limpiar') }}</span>
-                        </button>-->
                         <button type="submit" class="btn btn-brand float-right" id="guardar">
                                 <span>{{ __('Guardar') }}</span>
                         </button>
@@ -95,6 +80,8 @@
     </section>
 @endsection
 
-<script>
-$("#fecha" ).datepicker( "option", "dateFormat", "dd-mm-yy" );
-</script>
+@section('script')
+        <script>
+                $("#fecha" ).datepicker( "option", "dateFormat", "dd-mm-yy" ); 
+        </script>
+@endsection

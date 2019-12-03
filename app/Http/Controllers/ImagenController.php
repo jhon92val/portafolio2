@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Imagen;
 
 class ImagenController extends Controller
 {
@@ -16,9 +17,9 @@ class ImagenController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($album_id)
+    public function index()
     {
-        return view('imagenes.create')->with('album_id',$album_id);
+        
     }
 
     /**
@@ -26,9 +27,9 @@ class ImagenController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($trabajo_id)
     {
-        //
+        return view('imagenes.create')->with('trabajo_id',$trabajo_id);
     }
 
     /**
@@ -39,7 +40,43 @@ class ImagenController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            //'titulo' => 'required|max:255' ,
+            //'fecha' => 'date',
+           // 'descripcion' => 'required|max:500',
+            'imagen' => 'required|image|max:1999',
+        ]);
+
+        //OBTENER EL NOMBRE DEL ARCHIVO CON SU EXTENSION
+        $filenameWithExt = $request->file('imagen')->getClientOriginalName();
+        
+        //SOLO OBTENER EL NOMBRE DEL ARCHIVO
+        $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+
+        //SOLO OBTENER LA EXTENSION DEL ARCHIVO
+
+        $extesion = $request->file('imagen')->getClientOriginalExtension();
+            
+        //CREAR NUEVO NOMBRE DE ARCHIVO
+
+        $filenameToStore = $filename.'_'.time().'.'.$extesion;
+
+        //Subir imagen al servidor
+        $path = $request->file('imagen')->storeAs('public/images/imagenes/'.$request->input('trabajo_id'),$filenameToStore);
+
+        //Crear nueva imagen 
+        $imagen = New Imagen;
+        $imagen->trabajo_id = $request->input('trabajo_id');
+        $imagen->titulo = $request->input('titulo');
+        $imagen->size = $request->file('imagen')->getClientSize();
+        $imagen->descripcion = $request->input('descripcion');
+        $imagen->imagen = $filenameToStore;
+
+        $imagen->save();
+
+        return redirect('/trabajos/'.$request->input('trabajo_id'))->with('success','GUARDADO CON EXITO!');
+
+
     }
 
     /**
