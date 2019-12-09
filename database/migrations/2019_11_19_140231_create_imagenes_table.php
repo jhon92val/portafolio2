@@ -17,10 +17,10 @@ class CreateImagenesTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('trabajo_id');
             $table->foreign('trabajo_id','fk_trabajos_imagen')->references('id')->on('trabajos')->onDelete('restrict')->onUpdate('restrict');
-            $table->string('titulo');
+           // $table->string('titulo');
             $table->string('imagen');
             $table->string('size');
-            $table->string('descripcion');
+            //$table->string('descripcion');
             $table->timestamps();
         });
     }

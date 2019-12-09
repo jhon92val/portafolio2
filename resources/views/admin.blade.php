@@ -60,10 +60,7 @@
 @else
 <section class="module-page-title mx-5 mb-5">
                 <div class="text-uppercase text-center">
-                    <strong class="display-1 m-title c-align">¡Vaya!</strong>
-                    <p class="mt-2">parece que todavia no has creado ningún trabajo</p>
-                    <i class='fa fa-frown-o' style="font-size:300%"></i>
-
+                    <p class="mt-2">No hay trabajos para mostrar. Para crear uno has clic <a href="/trabajos/crear">aquí</a></p>
                 </div>
 </section>
 

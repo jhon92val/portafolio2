@@ -45,13 +45,13 @@
                     <p><a class="btn btn-outline btn-sm btn-brand" href="/home"><span>Regresar</span></a></p>
                 </div>
                 <div class="col-md-3">
-                <p><button class="btn  btn-sm btn-brand" data-toggle="modal" data-target="#exampleModal" href="/imagenes/crear/{{$trabajo->id}}"><span>Subir Imagenes</span></button></p>
+                <p><button class="btn  btn-sm btn-brand" data-toggle="modal" data-target="#addImage"><span>Subir Imagenes</span></button></p>
                 </div>
-                    <div class="modal fade bd-example-modal-xlg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade bd-example-modal-xlg" id="addImage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Sube una imagen para este trabajo</h5>
+                              <h5 class="modal-title" id="exampleModalLabel">Subir Imagen</h5>
                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                               </button>
@@ -61,22 +61,14 @@
             
                     <div class="row">
                         <form method="POST" action={{action('ImagenController@store')}} class="formulario" enctype="multipart/form-data">
-                        <div class="d-flex">
-                        <div class="form-group col-md-12">
-                            <label for="titulo">Titulo</label>
-                            <input id="titulo" class="form-control" type="text" name="titulo" placeholder="" required="" autocomplete="off">
-                        </div>
-                    </div>
-                        <div class="form-group col-md-12">
-                            <textarea class="form-control" name="descripcion" placeholder="Escribe algo sobre esto..." rows="8" required=""></textarea>
-                        </div>
+                        
 
                         <div class="d-flex">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <input type="hidden" name="trabajo_id" value={{$trabajo_id}}>
                         <div class="custom-file form-group col-md-12">
-                                <label for="imagen" class="text-uppercase">Sube una imagen de tu trabajo</label>
-                                <input type="file" name="imagen" class="form-control-file" id="imagen" required>
+                                <label for="imagen" class="text-uppercase">Agrega Una Imagen a este trabajo</label>
+                                <input type="file" name="imagen" class="form-control-file mt-3" id="imagen" required>
                         </div>
                         </div>
                         <div class="d-flex justify-content-around form-group col-md-12 ml-1" style="margin-top:100px">
@@ -126,9 +118,9 @@
                     <div class="portfolio-overlay"></div>
                     <div class="portfolio-caption">
                         <h5 class="portfolio-title">Portada</h5>
-                        <h6 class="portfolio-subtitle">Branding</h6>
+                        <h6 class="portfolio-subtitle">No se puede eliminar</h6>
                     </div>
-                </div><a class="portfolio-link" href="portfolio-single-1.html"></a>
+                </div><a class="portfolio-link" href="#"></a>
             </div>
                 @foreach ($trabajo->imagenes as $imagen)
                     @if ($i == $colcount)
@@ -137,10 +129,12 @@
                             <div class="portfolio-img-wrap" data-background="../storage/images/imagenes/{{$imagen->trabajo_id}}/{{$imagen->imagen}}"></div>
                                 <div class="portfolio-overlay"></div>
                                 <div class="portfolio-caption">
-                                    <h5 class="portfolio-title">{{$imagen->titulo}}</h5>
+                                    <h5 class="portfolio-title">Eliminar</h5>
                                     <h6 class="portfolio-subtitle" id="fechaTexto">{{$imagen->fecha}}</h6>
                                 </div>
-                            </div><a class="portfolio-link" href="#"></a>
+                            </div>
+                            <!--<a class="portfolio-link" href="#" data-toggle="modal" data-target="#formdeleteadmin_{{$imagen->id}}" title="Clic para eliminar"></a>-->
+                        <a class="portfolio-link" href="/imagenes/{{$imagen->id}}"></a>
                     </div>
                     @else 
                         <div class="portfolio-item js-tilt web design ">
@@ -148,20 +142,48 @@
                             <div class="portfolio-img-wrap" data-background="../storage/images/imagenes/{{$imagen->trabajo_id}}/{{$imagen->imagen}}"></div>
                                 <div class="portfolio-overlay"></div>
                                 <div class="portfolio-caption">
-                                    <h5 class="portfolio-title">{{$imagen->titulo}}</h5>
+                                    <h5 class="portfolio-title">Eliminar</h5>
                                     <h6 class="portfolio-subtitle">{{$imagen->fecha}}</h6>
                                 </div>
-                            </div><a class="portfolio-link" href="#"></a>
-                        </div>                  
+                            </div><a class="portfolio-link" href="#" data-toggle="modal" data-target="#formdeleteadmin_{{$imagen->id}}" title="Clic para eliminar"></a>
+                        </div>
+                                     
                     @endif
 
                     <?php $i++; ?>
+
                     
-                @endforeach               
+                    <div class="modal fade bd-example-modal-lg" id="formdeleteadmin_{{$imagen->id}}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">¿Eliminar esta imagen?</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <img src="../storage/images/imagenes/{{$imagen->trabajo_id}}/{{$imagen->imagen}}" alt="" width="300">
+                                    </div>
+                                    
+                                    <div class="modal-footer">
+                                        <form method="DELETE" action= "{{action('ImagenController@destroy',$imagen->id)}}" class="">
+                                            @csrf
+                                            @method('delete')
+                                        <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">No, Volver.</button>
+                                        <input type="submit" class="btn btn-sm btn-danger" value="Si, Eliminar">
+                                        </form>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div> 
+                @endforeach                
         </div>
     </div>
 </section>
 
+   
 @else
 <section class="mx-5 mb-5">
     
@@ -172,6 +194,7 @@
 </section>
 
 @endif
+
 
 
 @endsection

@@ -67,9 +67,9 @@ class ImagenController extends Controller
         //Crear nueva imagen 
         $imagen = New Imagen;
         $imagen->trabajo_id = $request->input('trabajo_id');
-        $imagen->titulo = $request->input('titulo');
+        //$imagen->titulo = $request->input('titulo');
         $imagen->size = $request->file('imagen')->getClientSize();
-        $imagen->descripcion = $request->input('descripcion');
+        //$imagen->descripcion = $request->input('descripcion');
         $imagen->imagen = $filenameToStore;
 
         $imagen->save();
@@ -87,7 +87,8 @@ class ImagenController extends Controller
      */
     public function show($id)
     {
-        //
+        $imagen = Imagen::find($id);
+        return view('imagenes.show')->with('imagen', $imagen);
     }
 
     /**
@@ -121,6 +122,6 @@ class ImagenController extends Controller
      */
     public function destroy($id)
     {
-        //
+       //
     }
 }

@@ -33,5 +33,8 @@ Route::get('/eliminar', 'HomeController@destroy')->name('eliminar');
 
 Route::get('/imagenes/crear/{id}', 'ImagenController@create')->name('crear');
 Route::post('/imagenes/store', 'ImagenController@store')->name('guardar');
+Route::get('/imagenes/{id}', 'ImagenController@show')->name('mostrar');
+Route::delete('/imagenes/{id}', 'ImagenController@destroy')->name('borrar');
+
 
 Auth::routes();
