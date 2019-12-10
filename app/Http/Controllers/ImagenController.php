@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Imagen;
 
 class ImagenController extends Controller
@@ -122,6 +123,12 @@ class ImagenController extends Controller
      */
     public function destroy($id)
     {
-       //
+       $imagen = Imagen::find($id);
+
+       if(Storage::delete('public/images/imagenes/'.$imagen->trabajo_id.'/'.$imagen->imagen)){
+            $imagen->delete();
+
+            return redirect('/trabajos/'.$imagen->trabajo_id)->with('success','Imagen Eliminada');
+       }
     }
 }

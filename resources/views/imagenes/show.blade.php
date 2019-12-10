@@ -31,8 +31,13 @@
 									<figcaption class="gallery-caption">Tamaño: {{$imagen->size}} Bytes</figcaption>
 								</figure>
 								<div class="d-flex justify-content-between col-md-12 mt-5">
-									<a class="btn btn-outline btn-sm btn-brand" href="{{url("trabajos/{$imagen->trabajo_id}")}}"><span>Regresar</span></a>
-									<button class="btn btn-sm btn-brand"><span>Borrar</span></button>
+									
+										<a class="btn btn-outline btn-sm btn-brand" href="{{url("trabajos/{$imagen->trabajo_id}")}}"><span>Regresar</span></a>
+										<form method="DELETE" action= "{{action('ImagenController@destroy',$imagen->id)}}" class="">
+												
+												@method('delete')
+										<input type="submit" class="btn btn-sm btn-brand" value="Borrar">
+									</form>
 								</div>								
 							</div>
 						</div>

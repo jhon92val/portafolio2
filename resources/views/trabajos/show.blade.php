@@ -133,19 +133,21 @@
                                     <h6 class="portfolio-subtitle" id="fechaTexto">{{$imagen->fecha}}</h6>
                                 </div>
                             </div>
-                            <!--<a class="portfolio-link" href="#" data-toggle="modal" data-target="#formdeleteadmin_{{$imagen->id}}" title="Clic para eliminar"></a>-->
-                        <a class="portfolio-link" href="/imagenes/{{$imagen->id}}"></a>
+                            <a class="portfolio-link" href="#" data-toggle="modal" data-target="#formdeleteadmin_{{$imagen->id}}" title="Clic para eliminar"></a>
+                        <!--<a class="portfolio-link" href="/imagenes/{{$imagen->id}}"></a>-->
                     </div>
                     @else 
-                        <div class="portfolio-item js-tilt web design ">
-                            <div class="portfolio-wrapper">
-                            <div class="portfolio-img-wrap" data-background="../storage/images/imagenes/{{$imagen->trabajo_id}}/{{$imagen->imagen}}"></div>
-                                <div class="portfolio-overlay"></div>
-                                <div class="portfolio-caption">
-                                    <h5 class="portfolio-title">Eliminar</h5>
-                                    <h6 class="portfolio-subtitle">{{$imagen->fecha}}</h6>
+                        <<div class="portfolio-item js-tilt web design ">
+                                <div class="portfolio-wrapper">
+                                <div class="portfolio-img-wrap" data-background="../storage/images/imagenes/{{$imagen->trabajo_id}}/{{$imagen->imagen}}"></div>
+                                    <div class="portfolio-overlay"></div>
+                                    <div class="portfolio-caption">
+                                        <h5 class="portfolio-title">Eliminar</h5>
+                                        <h6 class="portfolio-subtitle" id="fechaTexto">{{$imagen->fecha}}</h6>
+                                    </div>
                                 </div>
-                            </div><a class="portfolio-link" href="#" data-toggle="modal" data-target="#formdeleteadmin_{{$imagen->id}}" title="Clic para eliminar"></a>
+                                <a class="portfolio-link" href="#" data-toggle="modal" data-target="#formdeleteadmin_{{$imagen->id}}" title="Clic para eliminar"></a>
+                            <!--<a class="portfolio-link" href="/imagenes/{{$imagen->id}}"></a>-->
                         </div>
                                      
                     @endif
@@ -185,13 +187,42 @@
 
    
 @else
-<section class="mx-5 mb-5">
+        <section class="mb-5 mx-5">
+                <div class="container-fluid">
+                        
+                    <div class="row row-portfolio" data-columns="4">
+                            <div class="grid-sizer"></div>
+                        <div class="portfolio-item js-tilt branding photo large">
+                            <div class="portfolio-wrapper">
+                            <div class="portfolio-img-wrap" data-background="../storage/images/trabajos/{{$trabajo->portada}}"></div>
+                                <div class="portfolio-overlay"></div>
+                                <div class="portfolio-caption">
+                                    <h5 class="portfolio-title">Portada</h5>
+                                    <h6 class="portfolio-subtitle">No se puede eliminar</h6>
+                                </div>
+                            </div><a class="portfolio-link" href="#"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item js-tilt web design ">
+                    <div class="portfolio-wrapper">
+                        <div class="portfolio-img-wrap" data-background="../storage/images/imagenes/{{$imagen->trabajo_id}}/{{$imagen->imagen}}"></div>
+                            <div class="portfolio-overlay"></div>
+                            <div class="portfolio-caption">
+                                <h5 class="portfolio-title">Eliminar</h5>
+                                <h6 class="portfolio-subtitle" id="fechaTexto">{{$imagen->fecha}}</h6>
+                            </div>
+                    </div>                   
+                </div>
+                
+        </section>
     
                 <div class="text-uppercase text-center">
                     <p class="mt-2">No hay imagenes para mostrar.</p>
 
                 </div>
-</section>
+
 
 @endif
 
