@@ -36,7 +36,10 @@
                                     <h5 class="portfolio-subtitle fechaTexto prueba">{{$trabajo->fecha}}</h5>
                                 </div>
                             </div><a class="portfolio-link" href="/trabajos/{{$trabajo->id}}"></a>
+                            
+
                     </div>
+                    
                     @else 
                         <div class="portfolio-item js-tilt web design ">
                                 <div class="portfolio-wrapper">
@@ -47,7 +50,10 @@
                                         <h5 class="portfolio-subtitle fechaTexto prueba">{{$trabajo->fecha}}</h5>
                                     </div>
                                 </div><a class="portfolio-link" href="/trabajos/{{$trabajo->id}}"></a>
-                        </div>                   
+                                
+                        </div>
+                        
+                                       
                     @endif
 
                     <?php $i++; ?>

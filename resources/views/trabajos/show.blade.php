@@ -47,6 +47,12 @@
                 <div class="col-md-3">
                 <p><button class="btn  btn-sm btn-brand" data-toggle="modal" data-target="#addImage"><span>Subir Imagenes</span></button></p>
                 </div>
+                <div class="col-md-3">
+                    <p><button class="btn  btn-sm btn-brand" data-toggle="modal" data-target="#addImage"><span>Editar Trabajo</span></button></p>
+                </div>
+                <div class="col-md-3">
+                    <p><button class="btn  btn-sm btn-brand" data-toggle="modal" data-target="#addImage"><span>Eliminar Trabajo</span></button></p>
+                </div>
                     <div class="modal fade bd-example-modal-xlg" id="addImage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                           <div class="modal-content">
@@ -118,7 +124,7 @@
                     <div class="portfolio-overlay"></div>
                     <div class="portfolio-caption">
                         <h5 class="portfolio-title">Portada</h5>
-                        <h6 class="portfolio-subtitle">No se puede eliminar</h6>
+                        <h6 class="portfolio-subtitle">{{$trabajo->fecha}}</h6>
                     </div>
                 </div><a class="portfolio-link" href="#"></a>
             </div>
@@ -129,57 +135,34 @@
                             <div class="portfolio-img-wrap" data-background="../storage/images/imagenes/{{$imagen->trabajo_id}}/{{$imagen->imagen}}"></div>
                                 <div class="portfolio-overlay"></div>
                                 <div class="portfolio-caption">
-                                    <h5 class="portfolio-title">Eliminar</h5>
+                                    <h5 class="portfolio-title">Ver Imagen</h5>
                                     <h6 class="portfolio-subtitle" id="fechaTexto">{{$imagen->fecha}}</h6>
                                 </div>
+                
                             </div>
-                            <a class="portfolio-link" href="#" data-toggle="modal" data-target="#formdeleteadmin_{{$imagen->id}}" title="Clic para eliminar"></a>
-                        <!--<a class="portfolio-link" href="/imagenes/{{$imagen->id}}"></a>-->
+                          <!--  <a class="portfolio-link" href="#" data-toggle="modal" data-target="#formdeleteadmin_{{$imagen->id}}" title="Clic para eliminar"></a>-->
+                        <a class="portfolio-link" href="/imagenes/{{$imagen->id}}"></a>
+                    
                     </div>
+                    
                     @else 
-                        <<div class="portfolio-item js-tilt web design ">
+                        <div class="portfolio-item js-tilt web design ">
                                 <div class="portfolio-wrapper">
                                 <div class="portfolio-img-wrap" data-background="../storage/images/imagenes/{{$imagen->trabajo_id}}/{{$imagen->imagen}}"></div>
                                     <div class="portfolio-overlay"></div>
                                     <div class="portfolio-caption">
-                                        <h5 class="portfolio-title">Eliminar</h5>
+                                        <h5 class="portfolio-title">Ver Imagen</h5>
                                         <h6 class="portfolio-subtitle" id="fechaTexto">{{$imagen->fecha}}</h6>
                                     </div>
                                 </div>
-                                <a class="portfolio-link" href="#" data-toggle="modal" data-target="#formdeleteadmin_{{$imagen->id}}" title="Clic para eliminar"></a>
-                            <!--<a class="portfolio-link" href="/imagenes/{{$imagen->id}}"></a>-->
+                                <!--<a class="portfolio-link" href="#" data-toggle="modal" data-target="#formdeleteadmin_{{$imagen->id}}" title="Clic para eliminar"></a>-->
+                            <a class="portfolio-link" href="/imagenes/{{$imagen->id}}"></a>
                         </div>
+                        
                                      
                     @endif
 
                     <?php $i++; ?>
-
-                    
-                    <div class="modal fade bd-example-modal-lg" id="formdeleteadmin_{{$imagen->id}}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-lg" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">¿Eliminar esta imagen?</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body text-center">
-                                        <img src="../storage/images/imagenes/{{$imagen->trabajo_id}}/{{$imagen->imagen}}" alt="" width="300">
-                                    </div>
-                                    
-                                    <div class="modal-footer">
-                                        <form method="DELETE" action= "{{action('ImagenController@destroy',$imagen->id)}}" class="">
-                                            @csrf
-                                            @method('delete')
-                                        <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">No, Volver.</button>
-                                        <input type="submit" class="btn btn-sm btn-danger" value="Si, Eliminar">
-                                        </form>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div> 
                 @endforeach                
         </div>
     </div>
@@ -198,23 +181,13 @@
                                 <div class="portfolio-overlay"></div>
                                 <div class="portfolio-caption">
                                     <h5 class="portfolio-title">Portada</h5>
-                                    <h6 class="portfolio-subtitle">No se puede eliminar</h6>
+                                <h6 class="portfolio-subtitle">{{$trabajo->fecha}}</h6>
                                 </div>
                             </div><a class="portfolio-link" href="#"></a>
                         </div>
                     </div>
                 </div>
-
-                <div class="portfolio-item js-tilt web design ">
-                    <div class="portfolio-wrapper">
-                        <div class="portfolio-img-wrap" data-background="../storage/images/imagenes/{{$imagen->trabajo_id}}/{{$imagen->imagen}}"></div>
-                            <div class="portfolio-overlay"></div>
-                            <div class="portfolio-caption">
-                                <h5 class="portfolio-title">Eliminar</h5>
-                                <h6 class="portfolio-subtitle" id="fechaTexto">{{$imagen->fecha}}</h6>
-                            </div>
-                    </div>                   
-                </div>
+                
                 
         </section>
     
