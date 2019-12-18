@@ -106,7 +106,8 @@ class HomeController extends Controller
      */
     public function edit($id)
     {
-        //
+        $trabajo = Trabajo::findOrFail($id);
+        return view('trabajos.edit', ['trabajo' => $trabajo]);
     }
 
     /**
@@ -118,7 +119,15 @@ class HomeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return view('trabajos.update');
+        $trabajo = Trabajo::findOrFail($request->id);
+        $trabajo->update([
+            'titulo' => $request->titulo,
+            'fecha' => $request->fecha,
+            'descripcion' => $request->descripcion,
+            'portada' => $request->portada
+        ]);
+            
+    return redirect('home');
     }
 
     /**

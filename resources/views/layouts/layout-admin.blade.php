@@ -15,6 +15,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Lora|Montserrat:400,500,600,700|Open+Sans:400,400i,700" rel="stylesheet">
 		<!-- Bootstrap core CSS-->
 		<link href="{{asset('assets/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+		<link href="{{asset('assets/css/fileinput.min.css')}}" rel="stylesheet">
 		<!-- Fuentes de Iconos-->
 		<link href="{{asset('assets/css/font-awesome.min.css')}}" rel="stylesheet">
 		<link href="{{asset('assets/css/themify-icons.css')}}" rel="stylesheet">
@@ -59,10 +60,8 @@
 		<!-- Scripts-->
 		<script src="{{asset('assets/js/jquery-3.4.1.min.js')}}"></script>
 		<script src="{{asset('assets/js/popper.min.js')}}"></script>
-		<!--<script src="../../../cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>-->
 		<script src="{{asset('assets/bootstrap/js/bootstrap.min.js')}}"></script>
 		<script src="{{asset('assets/bootstrap/notify/bootstrap-notify.js')}}"></script>
-		<!--<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA0rANX07hh6ASNKdBr4mZH0KZSqbHYc3Q"></script>-->
 		<script src="{{asset('assets/js/plugins.min.js')}}"></script>
 		<script src="{{asset('assets/js/custom.min.js')}}"></script>
 		@yield('script')

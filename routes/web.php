@@ -27,8 +27,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/trabajos/crear', 'HomeController@create')->name('crear');
 Route::get('/trabajos/{id}', 'HomeController@show')->name('mostrar');
+Route::get('/trabajos/editar/{id}', 'HomeController@edit');
 Route::post('/trabajos/guardar', 'HomeController@store')->name('guardar');
-Route::get('/actualizar', 'HomeController@update')->name('actualizar');
+Route::get('/trabajos/actualizar/{id}', 'HomeController@update')->name('actualizar');
 Route::get('/eliminar', 'HomeController@destroy')->name('eliminar');
 
 Route::get('/imagenes/crear/{id}', 'ImagenController@create')->name('crear');
@@ -36,5 +37,3 @@ Route::post('/imagenes/store', 'ImagenController@store')->name('guardar');
 Route::get('/imagenes/{id}', 'ImagenController@show')->name('mostrar');
 Route::get('/imagenes/eliminar/{id}', 'ImagenController@destroy')->name('borrar');
 
-
-Auth::routes();

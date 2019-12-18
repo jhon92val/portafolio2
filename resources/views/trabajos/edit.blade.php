@@ -1,7 +1,7 @@
 @extends('layouts.layout-admin')
 
 @section('titulo')
-    Nuevo Trabajo
+    Editar Trabajo
 @endsection
 
 
@@ -22,8 +22,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="page-title-heading">Crear Nuevo Trabajo</h2>
-                    <h6 class="page-title-subheading">Ingresa la información de tu nuevo trabajo</h6>
+                    <h2 class="page-title-heading">Editar Trabajo</h2>
+                    <h6 class="page-title-subheading">Aqui podras modificar la información basica de tu trabajo</h6>
                 </div>
             </div>
         </div>
@@ -33,15 +33,15 @@
         <div class="container">
             
                     <div class="row">
-                        <form method="POST" action={{action('HomeController@store')}} class="formulario" enctype="multipart/form-data">
+                        <form method="get" action={{action('HomeController@update', $trabajo->id)}} class="formulario" enctype="multipart/form-data">
                         <div class="d-flex">
                         <div class="form-group col-md-6">
                             <label for="titulo">Titulo</label>
-                            <input id="titulo" class="form-control" type="text" name="titulo" placeholder="" required="" autocomplete="off">
+                            <input id="titulo" class="form-control" type="text" name="titulo" placeholder="" required="" autocomplete="off" value="{!!  $trabajo->titulo !!}">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="fecha">Fecha</label>
-                            <input class="form-control" type="date" name="fecha" placeholder="Fecha" min="2000-01-01" max="2200-12-12" id="fecha" required="">
+                            <input class="form-control" type="date" name="fecha" placeholder="Fecha" min="2000-01-01" max="2200-12-12" id="fecha" required="" value="{!!  $trabajo->fecha !!}">
                         </div>
                     </div>
                         <!--<div class="form-group col-md-12">
@@ -58,19 +58,19 @@
                               
                         </div>-->
                         <div class="form-group col-md-12">
-                            <textarea class="form-control" name="descripcion" placeholder="Escribe algo sobre esto..." rows="8" required=""></textarea>
+                            <textarea class="form-control" name="descripcion" placeholder="Escribe algo sobre esto..." rows="8" required="" >{!!  $trabajo->descripcion !!}</textarea>
                         </div>
 
                         
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                        <div class="form-group">
-                            <label for="portada" class="text-uppercase">Imagen de Portada</label>
-                            <input type="file" name="portada" class="form-control-file" id="portada" data-initial-preview="{{isset($trabajo->portada) ? Storage::url("../storage/images/trabajos/$trabajo->portada") : "http://www.placehold.it/200x150/AAAAAA&text=Portada+Trabajo"}}">
-                        </div>
+                        
+                            <label for="portada" class="text-uppercase">imagen de Portada</label>
+                            <input type="file" name="portada" class="form-control-file" id="portada" data-initial-preview="{{isset($trabajo->portada) ? Storage::url("../storage/images/trabajos/$trabajo->portada") : "http://www.placehold.it/200x150/AAAAAA&text=Portada+Trabajo"}}" required="">
+                        
                         
                         <div class="form-group col-md-12 ml-1 mt-5">
                         <button type="submit" class="btn btn-brand float-right" id="guardar">
-                                <span>{{ __('Guardar') }}</span>
+                                <span>{{ __('Actualizar') }}</span>
                         </button>
                         
                         </div>

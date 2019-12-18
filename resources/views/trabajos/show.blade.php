@@ -24,7 +24,7 @@
                 </ul>
             </div>
             <div class="col-md-6">
-                <p>{{$trabajo->descripcion}}</p>
+                <p class="text-uppercase text-justify">{{$trabajo->descripcion}}</p>
             </div>
         </div>
         <div class="row">
@@ -48,7 +48,7 @@
                 <p><button class="btn  btn-sm btn-brand" data-toggle="modal" data-target="#addImage"><span>Subir Imagenes</span></button></p>
                 </div>
                 <div class="col-md-3">
-                    <p><button class="btn  btn-sm btn-brand" data-toggle="modal" data-target="#addImage"><span>Editar Trabajo</span></button></p>
+                    <p><a class="btn  btn-sm btn-brand" href="/trabajos/editar/{{$trabajo->id}}"><span>Editar Trabajo</span></a></p>
                 </div>
                 <div class="col-md-3">
                     <p><button class="btn  btn-sm btn-brand" data-toggle="modal" data-target="#addImage"><span>Eliminar Trabajo</span></button></p>
